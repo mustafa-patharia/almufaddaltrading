@@ -1,29 +1,30 @@
 {% doc %}
-  Outputs CSS variables for Al Mufaddal General Trading marketplace styling.
-  All colors are linked directly to Theme Settings so the client can change them anytime
-  from Shopify Admin > Online Store > Customize > Theme Settings > Electronics & Marketplace.
+  Outputs sophisticated, minimalist CSS variables for Al Mufaddal General Trading.
+  Emphasizes editorial refinement, subtle contrast, and luxury tech aesthetics (Apple / B&O style).
 {% enddoc %}
 
 <style>
   :root {
-    /* Marketplace Theme Colors (Fully customizable via Theme Settings) */
-    --tech-header-bg: {{ settings.marketplace_header_bg | default: '#0f172a' }};
-    --tech-header-text: {{ settings.marketplace_header_text | default: '#ffffff' }};
-    --tech-accent: {{ settings.marketplace_accent_color | default: '#0284c7' }};
-    --tech-accent-hover: {{ settings.marketplace_accent_color | default: '#0284c7' | color_darken: 10 }};
-    --tech-deal-badge: {{ settings.marketplace_deal_badge | default: '#e11d48' }};
-    --tech-gold: {{ settings.marketplace_secondary_accent | default: '#f59e0b' }};
-    --tech-card-bg: {{ settings.marketplace_card_bg | default: '#ffffff' }};
-    --tech-card-border: {{ settings.marketplace_card_border | default: '#e2e8f0' }};
-    --tech-body-bg: {{ settings.page_background_color | default: '#ffffff' }};
-    --tech-text-main: {{ settings.page_text_color | default: '#0f172a' }};
-    --tech-text-muted: #64748b;
-    --tech-pill-bg: #f1f5f9;
-    --tech-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-    --tech-shadow-md: 0 4px 14px rgba(15, 23, 42, 0.08);
-    --tech-shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+    /* Sophisticated Luxury Tech Palette */
+    --tech-header-bg: {{ settings.marketplace_header_bg | default: '#ffffff' }};
+    --tech-header-text: {{ settings.marketplace_header_text | default: '#111827' }};
+    --tech-accent: {{ settings.marketplace_accent_color | default: '#111827' }};
+    --tech-accent-hover: #1f2937;
+    --tech-accent-subtle: #f3f4f6;
+    --tech-deal-badge: {{ settings.marketplace_deal_badge | default: '#111827' }};
+    --tech-badge-bg: #f3f4f6;
+    --tech-card-bg: #ffffff;
+    --tech-card-border: #e5e7eb;
+    --tech-card-border-subtle: #f1f2f4;
+    --tech-body-bg: #fafafa;
+    --tech-text-main: #111827;
+    --tech-text-muted: #6b7280;
+    --tech-text-light: #9ca3af;
+    --tech-radius-sm: 4px;
     --tech-radius: 8px;
     --tech-radius-lg: 12px;
-    --tech-font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --tech-shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --tech-shadow-card: 0 4px 20px -2px rgba(17, 24, 39, 0.05);
+    --tech-shadow-hover: 0 12px 32px -4px rgba(17, 24, 39, 0.08);
   }
 </style>

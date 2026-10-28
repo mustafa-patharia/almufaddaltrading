@@ -1,43 +1,44 @@
 {% comment %}
-  Trust & Assurance Bar (Amazon/Noon marketplace style)
-  Displays 4 key trust points with icons and subtitles.
+  Value Propositions & Institutional Trust Pillars (Bespoke Hairline SVG)
 {% endcomment %}
 
-<section class="trust-badges-section">
-  <div class="trust-badges__grid">
-    <!-- Item 1: Genuine -->
-    <div class="trust-badge-item">
-      <div class="trust-badge-item__icon">🛡️</div>
-      <div class="trust-badge-item__content">
-        <h3 class="trust-badge-item__title">{{ section.settings.badge1_title | default: '100% Genuine Tech' }}</h3>
-        <p class="trust-badge-item__desc">{{ section.settings.badge1_desc | default: 'Direct from authorized distributors' }}</p>
+<section class="trust-pillars-section">
+  <div class="trust-pillars__container">
+    <div class="trust-pillars__grid">
+      <!-- Pillar 1 -->
+      <div class="trust-pillar-item">
+        <div class="trust-pillar-item__icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="trust-pillar-item__title">{{ section.settings.pillar1_title | default: '100% Genuine Certified' }}</h3>
+        <p class="trust-pillar-item__desc">{{ section.settings.pillar1_desc | default: 'Direct authorized distributor procurement with authentic manufacturer provenance.' }}</p>
       </div>
-    </div>
 
-    <!-- Item 2: Express Delivery -->
-    <div class="trust-badge-item">
-      <div class="trust-badge-item__icon">🚀</div>
-      <div class="trust-badge-item__content">
-        <h3 class="trust-badge-item__title">{{ section.settings.badge2_title | default: 'Fast UAE Delivery' }}</h3>
-        <p class="trust-badge-item__desc">{{ section.settings.badge2_desc | default: 'Express delivery to your doorstep' }}</p>
+      <!-- Pillar 2 -->
+      <div class="trust-pillar-item">
+        <div class="trust-pillar-item__icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+        </div>
+        <h3 class="trust-pillar-item__title">{{ section.settings.pillar2_title | default: 'Corporate & Retail Sourcing' }}</h3>
+        <p class="trust-pillar-item__desc">{{ section.settings.pillar2_desc | default: 'Flexible commercial invoicing, tax compliance, and seamless procurement.' }}</p>
       </div>
-    </div>
 
-    <!-- Item 3: Warranty & Returns -->
-    <div class="trust-badge-item">
-      <div class="trust-badge-item__icon">🔄</div>
-      <div class="trust-badge-item__content">
-        <h3 class="trust-badge-item__title">{{ section.settings.badge3_title | default: 'Easy 7-Day Returns' }}</h3>
-        <p class="trust-badge-item__desc">{{ section.settings.badge3_desc | default: 'Hassle-free replacement guarantee' }}</p>
+      <!-- Pillar 3 -->
+      <div class="trust-pillar-item">
+        <div class="trust-pillar-item__icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="trust-pillar-item__title">{{ section.settings.pillar3_title | default: 'Express UAE Dispatch' }}</h3>
+        <p class="trust-pillar-item__desc">{{ section.settings.pillar3_desc | default: 'Expedited fulfillment throughout Dubai, Abu Dhabi, and Northern Emirates.' }}</p>
       </div>
-    </div>
 
-    <!-- Item 4: Payment -->
-    <div class="trust-badge-item">
-      <div class="trust-badge-item__icon">💳</div>
-      <div class="trust-badge-item__content">
-        <h3 class="trust-badge-item__title">{{ section.settings.badge4_title | default: 'Secure Payments & COD' }}</h3>
-        <p class="trust-badge-item__desc">{{ section.settings.badge4_desc | default: 'Cards, Apple Pay & Cash on Delivery' }}</p>
+      <!-- Pillar 4 -->
+      <div class="trust-pillar-item">
+        <div class="trust-pillar-item__icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="trust-pillar-item__title">{{ section.settings.pillar4_title | default: 'Comprehensive Warranty' }}</h3>
+        <p class="trust-pillar-item__desc">{{ section.settings.pillar4_desc | default: 'Complete official brand repair and replacement protection on all hardware.' }}</p>
       </div>
     </div>
   </div>
@@ -45,76 +46,76 @@
 
 {% schema %}
 {
-  "name": "Trust & Assurance Bar",
+  "name": "Trust Pillars",
   "settings": [
     {
       "type": "header",
-      "content": "Badge 1"
+      "content": "Pillar 1"
     },
     {
       "type": "text",
-      "id": "badge1_title",
+      "id": "pillar1_title",
       "label": "Title",
-      "default": "100% Genuine Tech"
+      "default": "100% Genuine Certified"
     },
     {
       "type": "text",
-      "id": "badge1_desc",
+      "id": "pillar1_desc",
       "label": "Description",
-      "default": "Direct from authorized distributors"
+      "default": "Direct authorized distributor procurement with authentic manufacturer provenance."
     },
     {
       "type": "header",
-      "content": "Badge 2"
+      "content": "Pillar 2"
     },
     {
       "type": "text",
-      "id": "badge2_title",
+      "id": "pillar2_title",
       "label": "Title",
-      "default": "Fast UAE Delivery"
+      "default": "Corporate & Retail Sourcing"
     },
     {
       "type": "text",
-      "id": "badge2_desc",
+      "id": "pillar2_desc",
       "label": "Description",
-      "default": "Express delivery to your doorstep"
+      "default": "Flexible commercial invoicing, tax compliance, and seamless procurement."
     },
     {
       "type": "header",
-      "content": "Badge 3"
+      "content": "Pillar 3"
     },
     {
       "type": "text",
-      "id": "badge3_title",
+      "id": "pillar3_title",
       "label": "Title",
-      "default": "Easy 7-Day Returns"
+      "default": "Express UAE Dispatch"
     },
     {
       "type": "text",
-      "id": "badge3_desc",
+      "id": "pillar3_desc",
       "label": "Description",
-      "default": "Hassle-free replacement guarantee"
+      "default": "Expedited fulfillment throughout Dubai, Abu Dhabi, and Northern Emirates."
     },
     {
       "type": "header",
-      "content": "Badge 4"
+      "content": "Pillar 4"
     },
     {
       "type": "text",
-      "id": "badge4_title",
+      "id": "pillar4_title",
       "label": "Title",
-      "default": "Secure Payments & COD"
+      "default": "Comprehensive Warranty"
     },
     {
       "type": "text",
-      "id": "badge4_desc",
+      "id": "pillar4_desc",
       "label": "Description",
-      "default": "Cards, Apple Pay & Cash on Delivery"
+      "default": "Complete official brand repair and replacement protection on all hardware."
     }
   ],
   "presets": [
     {
-      "name": "Trust & Assurance Bar"
+      "name": "Trust Pillars (Minimalist Luxury)"
     }
   ]
 }

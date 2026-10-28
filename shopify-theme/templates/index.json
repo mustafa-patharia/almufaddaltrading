@@ -3,32 +3,36 @@
     "marketplace_hero": {
       "type": "marketplace-hero",
       "settings": {
-        "main_tag": "⚡ Limited Time Electronics Offer",
-        "main_heading": "Next-Gen Electronics & Smart Devices",
-        "main_subheading": "Shop the latest flagship smartphones, high-performance laptops, and audio gear with official warranty.",
-        "main_button_text": "Shop Top Deals",
-        "main_button_link": "shopify://collections/all",
-        "card1_badge": "⚡ Deal of the Day",
-        "card1_title": "Premium ANC Headphones",
-        "card1_desc": "Up to 35% OFF on top audio brands",
+        "badge_text": "Al Mufaddal General Trading · Dubai",
+        "heading": "The New Standard in Consumer Electronics.",
+        "subheading": "Authorized regional distributor of premier smart devices, high-performance computing, and acoustic systems. Backed by comprehensive warranty.",
+        "primary_label": "Explore Catalog",
+        "primary_link": "shopify://collections/all",
+        "secondary_label": "Wholesale Inquiries",
+        "secondary_link": "shopify://collections/all",
+        "card1_meta": "Featured Series",
+        "card1_pill": "In Stock",
+        "card1_title": "Flagship Smartphones",
+        "card1_desc": "Curated 5G devices with certified international and GCC specifications.",
         "card1_link": "shopify://collections/all",
-        "card2_badge": "🔥 Trending Gadget",
-        "card2_title": "Smart 4K & OLED Displays",
-        "card2_desc": "Crystal clear visuals for work & entertainment",
+        "card2_meta": "Audiophile Grade",
+        "card2_pill": "New Arrival",
+        "card2_title": "Acoustic & Studio Sound",
+        "card2_desc": "Precision wireless headphones and monitors engineered for fidelity.",
         "card2_link": "shopify://collections/all"
       }
     },
     "trust_badges": {
       "type": "trust-badges",
       "settings": {
-        "badge1_title": "100% Genuine Tech",
-        "badge1_desc": "Direct from authorized distributors",
-        "badge2_title": "Fast UAE Delivery",
-        "badge2_desc": "Express delivery to your doorstep",
-        "badge3_title": "Easy 7-Day Returns",
-        "badge3_desc": "Hassle-free replacement guarantee",
-        "badge4_title": "Secure Payments & COD",
-        "badge4_desc": "Cards, Apple Pay & Cash on Delivery"
+        "pillar1_title": "100% Genuine Certified",
+        "pillar1_desc": "Direct authorized distributor procurement with authentic manufacturer provenance.",
+        "pillar2_title": "Corporate & Retail Sourcing",
+        "pillar2_desc": "Flexible commercial invoicing, tax compliance, and seamless procurement.",
+        "pillar3_title": "Express UAE Dispatch",
+        "pillar3_desc": "Expedited fulfillment throughout Dubai, Abu Dhabi, and Northern Emirates.",
+        "pillar4_title": "Comprehensive Warranty",
+        "pillar4_desc": "Complete official brand repair and replacement protection on all hardware."
       }
     },
     "category_icons": {
@@ -38,39 +42,44 @@
           "type": "category_item",
           "settings": {
             "title": "Smartphones",
-            "icon_emoji": "📱",
+            "icon_type": "smartphone",
+            "count_label": "Flagship 5G",
             "link": "shopify://collections/all"
           }
         },
         "cat_2": {
           "type": "category_item",
           "settings": {
-            "title": "Laptops",
-            "icon_emoji": "💻",
+            "title": "Computing",
+            "icon_type": "laptop",
+            "count_label": "Pro Workstations",
             "link": "shopify://collections/all"
           }
         },
         "cat_3": {
           "type": "category_item",
           "settings": {
-            "title": "Audio & Sound",
-            "icon_emoji": "🎧",
+            "title": "Acoustics",
+            "icon_type": "audio",
+            "count_label": "Studio Fidelity",
             "link": "shopify://collections/all"
           }
         },
         "cat_4": {
           "type": "category_item",
           "settings": {
-            "title": "Smartwatches",
-            "icon_emoji": "⌚",
+            "title": "Wearables",
+            "icon_type": "watch",
+            "count_label": "Connected Tech",
             "link": "shopify://collections/all"
           }
         },
         "cat_5": {
           "type": "category_item",
           "settings": {
-            "title": "Gaming Gear",
-            "icon_emoji": "🎮",
+            "title": "Gaming",
+            "icon_type": "gaming",
+            "count_label": "High Performance",
             "link": "shopify://collections/all"
           }
         },
@@ -78,15 +87,8 @@
           "type": "category_item",
           "settings": {
             "title": "Accessories",
-            "icon_emoji": "🔌",
-            "link": "shopify://collections/all"
-          }
-        },
-        "cat_7": {
-          "type": "category_item",
-          "settings": {
-            "title": "TVs & Displays",
-            "icon_emoji": "📺",
+            "icon_type": "accessories",
+            "count_label": "GaN & Fast Charge",
             "link": "shopify://collections/all"
           }
         }
@@ -97,20 +99,19 @@
         "cat_3",
         "cat_4",
         "cat_5",
-        "cat_6",
-        "cat_7"
+        "cat_6"
       ],
       "settings": {
-        "heading": "Shop by Category",
+        "subheading": "Catalog Architecture",
+        "heading": "Core Product Categories",
         "view_all_link": "shopify://collections/all"
       }
     },
     "flash_deals": {
       "type": "flash-deals",
       "settings": {
-        "badge_text": "⚡ FLASH DEALS",
-        "heading": "Deals of the Day",
-        "countdown_hours": 8,
+        "meta_text": "Selected Procurement",
+        "heading": "Curated Hardware & Special Releases",
         "collection": "all",
         "products_to_show": 4
       }
@@ -154,7 +155,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Trending in Electronics</h3>",
+                "text": "<h3>Institutional & Commercial Inventory</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -178,7 +179,7 @@
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
-                "label": "View all",
+                "label": "View full catalog",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
@@ -289,7 +290,7 @@
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
-        "columns_gap": 8,
+        "columns_gap": 16,
         "rows_gap": 24,
         "icons_style": "arrow",
         "icons_shape": "none",
@@ -297,8 +298,8 @@
         "horizontal_alignment": "flex-start",
         "gap": 28,
         "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 36,
-        "padding-block-end": 36
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     },
     "brand_grid": {
@@ -307,9 +308,9 @@
         "brand_1": { "type": "brand_item", "settings": { "brand_name": "Apple", "link": "shopify://collections/all" } },
         "brand_2": { "type": "brand_item", "settings": { "brand_name": "Samsung", "link": "shopify://collections/all" } },
         "brand_3": { "type": "brand_item", "settings": { "brand_name": "Sony", "link": "shopify://collections/all" } },
-        "brand_4": { "type": "brand_item", "settings": { "brand_name": "Dell", "link": "shopify://collections/all" } },
-        "brand_5": { "type": "brand_item", "settings": { "brand_name": "HP", "link": "shopify://collections/all" } },
-        "brand_6": { "type": "brand_item", "settings": { "brand_name": "Anker", "link": "shopify://collections/all" } }
+        "brand_4": { "type": "brand_item", "settings": { "brand_name": "Bang & Olufsen", "link": "shopify://collections/all" } },
+        "brand_5": { "type": "brand_item", "settings": { "brand_name": "Dell Technologies", "link": "shopify://collections/all" } },
+        "brand_6": { "type": "brand_item", "settings": { "brand_name": "Bose", "link": "shopify://collections/all" } }
       },
       "block_order": [
         "brand_1",
@@ -320,7 +321,8 @@
         "brand_6"
       ],
       "settings": {
-        "heading": "Featured Electronics Brands"
+        "meta_text": "Authorized Portfolios",
+        "heading": "Global Technology Partners"
       }
     }
   },

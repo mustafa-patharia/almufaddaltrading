@@ -1,33 +1,44 @@
 {% comment %}
-  Shop by Category Icons Bar (Amazon/Noon style)
-  Horizontal scroll on mobile, responsive grid/track on desktop.
+  Sophisticated Category Architecture Showcase (Clean SVG Minimalist)
 {% endcomment %}
 
-<section class="category-icons-section">
-  <div class="category-icons__container">
-    <div class="category-icons__header">
-      <h2 class="category-icons__heading">
-        <span>⚡</span>
-        {{ section.settings.heading | default: 'Shop by Category' }}
-      </h2>
+<section class="category-showcase-section">
+  <div class="category-showcase__container">
+    <div class="category-showcase__header">
+      <div>
+        <p class="category-showcase__subheading">{{ section.settings.subheading | default: 'Catalog Architecture' }}</p>
+        <h2 class="category-showcase__heading">{{ section.settings.heading | default: 'Core Product Categories' }}</h2>
+      </div>
       {% if section.settings.view_all_link != blank %}
-        <a href="{{ section.settings.view_all_link }}" style="font-size: 0.875rem; font-weight: 600; color: var(--tech-accent); text-decoration: none;">
-          View All &rarr;
+        <a href="{{ section.settings.view_all_link }}" style="font-size: 0.85rem; font-weight: 500; color: #111827; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+          View full index &rarr;
         </a>
       {% endif %}
     </div>
 
-    <div class="category-icons__track">
+    <div class="category-showcase__grid">
       {% for block in section.blocks %}
-        <a href="{{ block.settings.link | default: '/collections/all' }}" class="category-icon-item" {{ block.shopify_attributes }}>
-          <div class="category-icon-item__circle">
-            {% if block.settings.custom_image != blank %}
-              <img src="{{ block.settings.custom_image | image_url: width: 100 }}" alt="{{ block.settings.title }}" width="44" height="44" loading="lazy" style="width: 44px; height: 44px; object-fit: contain;">
-            {% else %}
-              <span>{{ block.settings.icon_emoji | default: '📱' }}</span>
-            {% endif %}
+        <a href="{{ block.settings.link | default: routes.all_products_collection_url }}" class="category-card" {{ block.shopify_attributes }}>
+          <div class="category-card__icon-wrap">
+            {% case block.settings.icon_type %}
+              {% when 'smartphone' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              {% when 'laptop' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+              {% when 'audio' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
+              {% when 'watch' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="6" y="6" rx="3"/><path d="M10 2h4l1 4h-6z"/><path d="M10 22h4l1-4h-6z"/></svg>
+              {% when 'gaming' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="12" y2="12"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="15" x2="15.01" y1="13" y2="13"/><line x1="18" x2="18.01" y1="11" y2="11"/><rect width="20" height="12" x="2" y="6" rx="6"/></svg>
+              {% when 'accessories' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10"/><path d="M18.4 6.6a9 9 0 1 1-12.77.04"/></svg>
+              {% else %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            {% endcase %}
           </div>
-          <span class="category-icon-item__label">{{ block.settings.title }}</span>
+          <h3 class="category-card__title">{{ block.settings.title }}</h3>
+          <p class="category-card__count">{{ block.settings.count_label | default: 'Explore Series' }}</p>
         </a>
       {% endfor %}
     </div>
@@ -36,103 +47,76 @@
 
 {% schema %}
 {
-  "name": "Category Icons Bar",
+  "name": "Category Showcase",
   "settings": [
     {
       "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Catalog Architecture"
+    },
+    {
+      "type": "text",
       "id": "heading",
-      "label": "Section Heading",
-      "default": "Shop by Category"
+      "label": "Heading",
+      "default": "Core Product Categories"
     },
     {
       "type": "url",
       "id": "view_all_link",
-      "label": "View All Link"
+      "label": "Index Link"
     }
   ],
   "blocks": [
     {
       "type": "category_item",
-      "name": "Category",
+      "name": "Category Tile",
       "settings": [
         {
           "type": "text",
           "id": "title",
-          "label": "Category Name",
-          "default": "Mobiles"
+          "label": "Category Title",
+          "default": "Smartphones"
+        },
+        {
+          "type": "select",
+          "id": "icon_type",
+          "label": "Icon Symbol",
+          "options": [
+            { "value": "smartphone", "label": "Smartphone" },
+            { "value": "laptop", "label": "Laptop / Computing" },
+            { "value": "audio", "label": "Headphones / Audio" },
+            { "value": "watch", "label": "Smartwatch / Wearable" },
+            { "value": "gaming", "label": "Gaming / Console" },
+            { "value": "accessories", "label": "Power & Cables" },
+            { "value": "display", "label": "Displays & TVs" }
+          ],
+          "default": "smartphone"
         },
         {
           "type": "text",
-          "id": "icon_emoji",
-          "label": "Emoji Icon (e.g. 📱, 💻, 🎧, ⌚, 🎮, 🔌, 📷)",
-          "default": "📱"
-        },
-        {
-          "type": "image_picker",
-          "id": "custom_image",
-          "label": "Or Custom Icon Image"
+          "id": "count_label",
+          "label": "Subtitle / Badge",
+          "default": "Explore Series"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Category Link"
+          "label": "Target Collection"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Category Icons Bar",
+      "name": "Category Showcase (Clean Minimalist)",
       "blocks": [
-        {
-          "type": "category_item",
-          "settings": {
-            "title": "Smartphones",
-            "icon_emoji": "📱"
-          }
-        },
-        {
-          "type": "category_item",
-          "settings": {
-            "title": "Laptops",
-            "icon_emoji": "💻"
-          }
-        },
-        {
-          "type": "category_item",
-          "settings": {
-            "title": "Audio & Sound",
-            "icon_emoji": "🎧"
-          }
-        },
-        {
-          "type": "category_item",
-          "settings": {
-            "title": "Smartwatches",
-            "icon_emoji": "⌚"
-          }
-        },
-        {
-          "type": "category_item",
-          "settings": {
-            "title": "Gaming Gear",
-            "icon_emoji": "🎮"
-          }
-        },
-        {
-          "type": "category_item",
-          "settings": {
-            "title": "Accessories",
-            "icon_emoji": "🔌"
-          }
-        },
-        {
-          "type": "category_item",
-          "settings": {
-            "title": "TVs & Video",
-            "icon_emoji": "📺"
-          }
-        }
+        { "type": "category_item", "settings": { "title": "Smartphones", "icon_type": "smartphone", "count_label": "Flagship 5G" } },
+        { "type": "category_item", "settings": { "title": "Computing", "icon_type": "laptop", "count_label": "Pro Workstations" } },
+        { "type": "category_item", "settings": { "title": "Acoustics", "icon_type": "audio", "count_label": "Studio Fidelity" } },
+        { "type": "category_item", "settings": { "title": "Wearables", "icon_type": "watch", "count_label": "Connected Tech" } },
+        { "type": "category_item", "settings": { "title": "Gaming", "icon_type": "gaming", "count_label": "High Frame-rate" } },
+        { "type": "category_item", "settings": { "title": "Accessories", "icon_type": "accessories", "count_label": "GaN & Fast Charge" } }
       ]
     }
   ]
