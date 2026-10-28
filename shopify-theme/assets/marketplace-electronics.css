@@ -1,0 +1,636 @@
+/* ==========================================================================
+   AL MUFADDAL GENERAL TRADING - MARKETPLACE (AMAZON & NOON HYBRID) STYLES
+   ========================================================================== */
+
+/* Header & Announcement Adjustments */
+.header-section {
+  background-color: var(--tech-header-bg) !important;
+  color: var(--tech-header-text) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-section a,
+.header-section button,
+.header-section svg,
+.header-section .header__link,
+.header-section .header-actions__action {
+  color: var(--tech-header-text) !important;
+  fill: var(--tech-header-text) !important;
+}
+
+.header-section .header__link:hover,
+.header-section button:hover {
+  color: var(--tech-accent) !important;
+  fill: var(--tech-accent) !important;
+}
+
+.announcement-bar {
+  background: linear-gradient(90deg, var(--tech-header-bg), #1e293b) !important;
+  color: #ffffff !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Category Sub-Navigation Bar (Amazon/Noon style) */
+.header__row--bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-block: 6px;
+}
+
+/* ==========================================================================
+   1. MARKETPLACE HERO SECTION (MAIN BANNER + 2 SIDE PROMO CARDS)
+   ========================================================================== */
+.marketplace-hero-section {
+  padding-block: 24px;
+  background-color: var(--tech-bg);
+}
+
+.marketplace-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: var(--page-width, 1340px);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+@media screen and (min-width: 990px) {
+  .marketplace-hero__grid {
+    grid-template-columns: 2.2fr 1fr;
+    gap: 20px;
+  }
+}
+
+.marketplace-hero__main {
+  position: relative;
+  background: linear-gradient(135deg, #091322 0%, #172554 100%);
+  border-radius: var(--tech-radius-lg);
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  color: #ffffff;
+  box-shadow: var(--tech-shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.marketplace-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--tech-deal-badge);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  width: fit-content;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.marketplace-hero__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.marketplace-hero__subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  max-width: 500px;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.marketplace-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--tech-accent);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: var(--tech-radius);
+  text-decoration: none;
+  width: fit-content;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+
+.marketplace-hero__cta:hover {
+  background-color: var(--tech-accent-hover);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.marketplace-hero__side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.marketplace-side-card {
+  position: relative;
+  background-color: var(--tech-surface);
+  border: 1px solid var(--tech-card-border);
+  border-radius: var(--tech-radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  text-decoration: none;
+  box-shadow: var(--tech-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.marketplace-side-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--tech-shadow-md);
+  border-color: var(--tech-accent);
+}
+
+.marketplace-side-card__badge {
+  display: inline-block;
+  background-color: rgba(2, 132, 199, 0.1);
+  color: var(--tech-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.marketplace-side-card--deal .marketplace-side-card__badge {
+  background-color: rgba(225, 29, 72, 0.1);
+  color: var(--tech-deal-badge);
+}
+
+.marketplace-side-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--tech-text-main);
+  margin: 0 0 6px 0;
+}
+
+.marketplace-side-card__desc {
+  font-size: 0.875rem;
+  color: var(--tech-text-muted);
+  margin: 0 0 16px 0;
+}
+
+.marketplace-side-card__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--tech-accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   2. CATEGORY ICONS BAR (SHOP BY CATEGORY)
+   ========================================================================== */
+.category-icons-section {
+  padding-block: 28px;
+  background-color: var(--tech-surface);
+  border-bottom: 1px solid var(--tech-card-border);
+}
+
+.category-icons__container {
+  max-width: var(--page-width, 1340px);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.category-icons__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.category-icons__heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--tech-text-main);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-icons__track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none; /* Firefox */
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-icons__track::-webkit-scrollbar {
+  display: none;
+}
+
+.category-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  flex: 0 0 auto;
+  width: 100px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.category-icon-item:hover {
+  transform: translateY(-4px);
+}
+
+.category-icon-item__circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-size: 1.75rem;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-icon-item:hover .category-icon-item__circle {
+  border-color: var(--tech-accent);
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
+}
+
+.category-icon-item__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tech-text-main);
+  line-height: 1.25;
+  transition: color 0.2s ease;
+}
+
+.category-icon-item:hover .category-icon-item__label {
+  color: var(--tech-accent);
+}
+
+/* ==========================================================================
+   3. FLASH DEALS & COUNTDOWN SECTION (NOON / AMAZON SIGNATURE)
+   ========================================================================== */
+.flash-deals-section {
+  padding-block: 36px;
+  background-color: var(--tech-bg);
+}
+
+.flash-deals__container {
+  max-width: var(--page-width, 1340px);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.flash-deals__banner {
+  background: linear-gradient(90deg, #1e1b4b 0%, #0f172a 100%);
+  border-radius: var(--tech-radius-lg);
+  padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.flash-deals__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flash-deals__badge {
+  background-color: var(--tech-deal-badge);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.flash-deals__title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.flash-deals__timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.flash-deals__timer-digit {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  min-width: 36px;
+  text-align: center;
+}
+
+.flash-deals__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.deal-card {
+  background: var(--tech-surface);
+  border: 1px solid var(--tech-card-border);
+  border-radius: var(--tech-radius-lg);
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--tech-shadow-md);
+  border-color: var(--tech-accent);
+}
+
+.deal-card__badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.deal-card__discount {
+  background-color: var(--tech-deal-badge);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.deal-card__express {
+  background-color: rgba(2, 132, 199, 0.12);
+  color: var(--tech-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.deal-card__image-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f8fafc;
+  border-radius: var(--tech-radius);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.deal-card__image-wrap img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.deal-card:hover .deal-card__image-wrap img {
+  transform: scale(1.05);
+}
+
+.deal-card__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--tech-text-main);
+  margin: 0 0 8px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.deal-card__pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.deal-card__price-sale {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--tech-text-main);
+}
+
+.deal-card__price-compare {
+  font-size: 0.85rem;
+  color: var(--tech-text-muted);
+  text-decoration: line-through;
+}
+
+.deal-card__progress-wrap {
+  margin-bottom: 14px;
+}
+
+.deal-card__progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.deal-card__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--tech-gold), var(--tech-deal-badge));
+  border-radius: 9999px;
+}
+
+.deal-card__stock-text {
+  font-size: 0.725rem;
+  color: var(--tech-deal-badge);
+  font-weight: 600;
+}
+
+.deal-card__button {
+  background-color: var(--tech-accent);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px;
+  border-radius: var(--tech-radius);
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.deal-card__button:hover {
+  background-color: var(--tech-accent-hover);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   4. TRUST & GUARANTEE BAR (100% GENUINE, WARRANTY, FAST DELIVERY, RETURNS)
+   ========================================================================== */
+.trust-badges-section {
+  padding-block: 30px;
+  background-color: var(--tech-surface);
+  border-top: 1px solid var(--tech-card-border);
+  border-bottom: 1px solid var(--tech-card-border);
+}
+
+.trust-badges__grid {
+  max-width: var(--page-width, 1340px);
+  margin-inline: auto;
+  padding-inline: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  .trust-badges__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.trust-badge-item__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(2, 132, 199, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  border: 1px solid rgba(2, 132, 199, 0.15);
+}
+
+.trust-badge-item__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-badge-item__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tech-text-main);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.trust-badge-item__desc {
+  font-size: 0.8rem;
+  color: var(--tech-text-muted);
+  margin: 2px 0 0 0;
+  line-height: 1.3;
+}
+
+/* ==========================================================================
+   5. BRAND GRID SECTION
+   ========================================================================== */
+.brand-grid-section {
+  padding-block: 36px;
+  background-color: var(--tech-bg);
+}
+
+.brand-grid__container {
+  max-width: var(--page-width, 1340px);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.brand-grid__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--tech-text-main);
+  margin: 0 0 20px 0;
+}
+
+.brand-grid__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .brand-grid__items {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+}
+
+.brand-card {
+  background-color: var(--tech-surface);
+  border: 1px solid var(--tech-card-border);
+  border-radius: var(--tech-radius);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--tech-text-main);
+  min-height: 70px;
+  text-decoration: none;
+  box-shadow: var(--tech-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.brand-card:hover {
+  border-color: var(--tech-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--tech-shadow-md);
+  color: var(--tech-accent);
+}

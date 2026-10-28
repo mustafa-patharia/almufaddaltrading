@@ -17,7 +17,7 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "⚡ Express Delivery Across UAE | 100% Genuine Electronics | Cash on Delivery Available",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "letter_spacing": "normal",
@@ -77,7 +77,7 @@
       "settings": {
         "logo_position": "left",
         "menu_position": "left",
-        "menu_row": "top",
+        "menu_row": "bottom",
         "show_search": true,
         "search_position": "right",
         "search_row": "top",

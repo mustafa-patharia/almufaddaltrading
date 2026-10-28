@@ -1,0 +1,140 @@
+{% comment %}
+  Shop by Category Icons Bar (Amazon/Noon style)
+  Horizontal scroll on mobile, responsive grid/track on desktop.
+{% endcomment %}
+
+<section class="category-icons-section">
+  <div class="category-icons__container">
+    <div class="category-icons__header">
+      <h2 class="category-icons__heading">
+        <span>⚡</span>
+        {{ section.settings.heading | default: 'Shop by Category' }}
+      </h2>
+      {% if section.settings.view_all_link != blank %}
+        <a href="{{ section.settings.view_all_link }}" style="font-size: 0.875rem; font-weight: 600; color: var(--tech-accent); text-decoration: none;">
+          View All &rarr;
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="category-icons__track">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link | default: '/collections/all' }}" class="category-icon-item" {{ block.shopify_attributes }}>
+          <div class="category-icon-item__circle">
+            {% if block.settings.custom_image != blank %}
+              <img src="{{ block.settings.custom_image | image_url: width: 100 }}" alt="{{ block.settings.title }}" width="44" height="44" loading="lazy" style="width: 44px; height: 44px; object-fit: contain;">
+            {% else %}
+              <span>{{ block.settings.icon_emoji | default: '📱' }}</span>
+            {% endif %}
+          </div>
+          <span class="category-icon-item__label">{{ block.settings.title }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category Icons Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View All Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_item",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Name",
+          "default": "Mobiles"
+        },
+        {
+          "type": "text",
+          "id": "icon_emoji",
+          "label": "Emoji Icon (e.g. 📱, 💻, 🎧, ⌚, 🎮, 🔌, 📷)",
+          "default": "📱"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Or Custom Icon Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Icons Bar",
+      "blocks": [
+        {
+          "type": "category_item",
+          "settings": {
+            "title": "Smartphones",
+            "icon_emoji": "📱"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "title": "Laptops",
+            "icon_emoji": "💻"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "title": "Audio & Sound",
+            "icon_emoji": "🎧"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "title": "Smartwatches",
+            "icon_emoji": "⌚"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "title": "Gaming Gear",
+            "icon_emoji": "🎮"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "title": "Accessories",
+            "icon_emoji": "🔌"
+          }
+        },
+        {
+          "type": "category_item",
+          "settings": {
+            "title": "TVs & Video",
+            "icon_emoji": "📺"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

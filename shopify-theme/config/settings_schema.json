@@ -2116,5 +2116,56 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Electronics & Marketplace",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Custom styling for Al Mufaddal General Trading (Amazon & Noon hybrid). Easily customize these colors anytime."
+      },
+      {
+        "type": "color",
+        "id": "marketplace_header_bg",
+        "label": "Header Background Color",
+        "default": "#0f172a"
+      },
+      {
+        "type": "color",
+        "id": "marketplace_header_text",
+        "label": "Header Text & Icons",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "marketplace_accent_color",
+        "label": "Primary Accent (Buttons & Active Links)",
+        "default": "#0284c7"
+      },
+      {
+        "type": "color",
+        "id": "marketplace_deal_badge",
+        "label": "Flash Deal & Discount Badge Color",
+        "default": "#e11d48"
+      },
+      {
+        "type": "color",
+        "id": "marketplace_secondary_accent",
+        "label": "Secondary Accent / Rating Gold",
+        "default": "#f59e0b"
+      },
+      {
+        "type": "color",
+        "id": "marketplace_card_bg",
+        "label": "Product Card Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "marketplace_card_border",
+        "label": "Product Card Border Color",
+        "default": "#e2e8f0"
+      }
+    ]
   }
 ]

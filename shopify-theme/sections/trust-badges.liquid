@@ -1,0 +1,121 @@
+{% comment %}
+  Trust & Assurance Bar (Amazon/Noon marketplace style)
+  Displays 4 key trust points with icons and subtitles.
+{% endcomment %}
+
+<section class="trust-badges-section">
+  <div class="trust-badges__grid">
+    <!-- Item 1: Genuine -->
+    <div class="trust-badge-item">
+      <div class="trust-badge-item__icon">🛡️</div>
+      <div class="trust-badge-item__content">
+        <h3 class="trust-badge-item__title">{{ section.settings.badge1_title | default: '100% Genuine Tech' }}</h3>
+        <p class="trust-badge-item__desc">{{ section.settings.badge1_desc | default: 'Direct from authorized distributors' }}</p>
+      </div>
+    </div>
+
+    <!-- Item 2: Express Delivery -->
+    <div class="trust-badge-item">
+      <div class="trust-badge-item__icon">🚀</div>
+      <div class="trust-badge-item__content">
+        <h3 class="trust-badge-item__title">{{ section.settings.badge2_title | default: 'Fast UAE Delivery' }}</h3>
+        <p class="trust-badge-item__desc">{{ section.settings.badge2_desc | default: 'Express delivery to your doorstep' }}</p>
+      </div>
+    </div>
+
+    <!-- Item 3: Warranty & Returns -->
+    <div class="trust-badge-item">
+      <div class="trust-badge-item__icon">🔄</div>
+      <div class="trust-badge-item__content">
+        <h3 class="trust-badge-item__title">{{ section.settings.badge3_title | default: 'Easy 7-Day Returns' }}</h3>
+        <p class="trust-badge-item__desc">{{ section.settings.badge3_desc | default: 'Hassle-free replacement guarantee' }}</p>
+      </div>
+    </div>
+
+    <!-- Item 4: Payment -->
+    <div class="trust-badge-item">
+      <div class="trust-badge-item__icon">💳</div>
+      <div class="trust-badge-item__content">
+        <h3 class="trust-badge-item__title">{{ section.settings.badge4_title | default: 'Secure Payments & COD' }}</h3>
+        <p class="trust-badge-item__desc">{{ section.settings.badge4_desc | default: 'Cards, Apple Pay & Cash on Delivery' }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Trust & Assurance Bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Badge 1"
+    },
+    {
+      "type": "text",
+      "id": "badge1_title",
+      "label": "Title",
+      "default": "100% Genuine Tech"
+    },
+    {
+      "type": "text",
+      "id": "badge1_desc",
+      "label": "Description",
+      "default": "Direct from authorized distributors"
+    },
+    {
+      "type": "header",
+      "content": "Badge 2"
+    },
+    {
+      "type": "text",
+      "id": "badge2_title",
+      "label": "Title",
+      "default": "Fast UAE Delivery"
+    },
+    {
+      "type": "text",
+      "id": "badge2_desc",
+      "label": "Description",
+      "default": "Express delivery to your doorstep"
+    },
+    {
+      "type": "header",
+      "content": "Badge 3"
+    },
+    {
+      "type": "text",
+      "id": "badge3_title",
+      "label": "Title",
+      "default": "Easy 7-Day Returns"
+    },
+    {
+      "type": "text",
+      "id": "badge3_desc",
+      "label": "Description",
+      "default": "Hassle-free replacement guarantee"
+    },
+    {
+      "type": "header",
+      "content": "Badge 4"
+    },
+    {
+      "type": "text",
+      "id": "badge4_title",
+      "label": "Title",
+      "default": "Secure Payments & COD"
+    },
+    {
+      "type": "text",
+      "id": "badge4_desc",
+      "label": "Description",
+      "default": "Cards, Apple Pay & Cash on Delivery"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust & Assurance Bar"
+    }
+  ]
+}
+{% endschema %}

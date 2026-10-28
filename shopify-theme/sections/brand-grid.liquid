@@ -1,0 +1,73 @@
+{% comment %}
+  Brand Showcase Grid (Amazon/Noon style)
+  Shows authorized & trending electronics brand cards.
+{% endcomment %}
+
+<section class="brand-grid-section">
+  <div class="brand-grid__container">
+    <h2 class="brand-grid__title">{{ section.settings.heading | default: 'Featured Electronics Brands' }}</h2>
+    
+    <div class="brand-grid__items">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link | default: '/collections/all' }}" class="brand-card" {{ block.shopify_attributes }}>
+          {% if block.settings.logo_image != blank %}
+            <img src="{{ block.settings.logo_image | image_url: width: 140 }}" alt="{{ block.settings.brand_name }}" width="140" height="36" loading="lazy" style="max-height: 36px; object-fit: contain;">
+          {% else %}
+            <span>{{ block.settings.brand_name }}</span>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Brands Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Featured Electronics Brands"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand_item",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "text",
+          "id": "brand_name",
+          "label": "Brand Name",
+          "default": "Apple"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Brand Logo (Optional)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Brand Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Brands Grid",
+      "blocks": [
+        { "type": "brand_item", "settings": { "brand_name": "Apple" } },
+        { "type": "brand_item", "settings": { "brand_name": "Samsung" } },
+        { "type": "brand_item", "settings": { "brand_name": "Sony" } },
+        { "type": "brand_item", "settings": { "brand_name": "Dell" } },
+        { "type": "brand_item", "settings": { "brand_name": "HP" } },
+        { "type": "brand_item", "settings": { "brand_name": "Anker" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

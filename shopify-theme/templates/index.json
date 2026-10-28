@@ -1,94 +1,118 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
-    "hero_jVaWmY": {
-      "type": "hero",
+    "marketplace_hero": {
+      "type": "marketplace-hero",
+      "settings": {
+        "main_tag": "⚡ Limited Time Electronics Offer",
+        "main_heading": "Next-Gen Electronics & Smart Devices",
+        "main_subheading": "Shop the latest flagship smartphones, high-performance laptops, and audio gear with official warranty.",
+        "main_button_text": "Shop Top Deals",
+        "main_button_link": "shopify://collections/all",
+        "card1_badge": "⚡ Deal of the Day",
+        "card1_title": "Premium ANC Headphones",
+        "card1_desc": "Up to 35% OFF on top audio brands",
+        "card1_link": "shopify://collections/all",
+        "card2_badge": "🔥 Trending Gadget",
+        "card2_title": "Smart 4K & OLED Displays",
+        "card2_desc": "Crystal clear visuals for work & entertainment",
+        "card2_link": "shopify://collections/all"
+      }
+    },
+    "trust_badges": {
+      "type": "trust-badges",
+      "settings": {
+        "badge1_title": "100% Genuine Tech",
+        "badge1_desc": "Direct from authorized distributors",
+        "badge2_title": "Fast UAE Delivery",
+        "badge2_desc": "Express delivery to your doorstep",
+        "badge3_title": "Easy 7-Day Returns",
+        "badge3_desc": "Hassle-free replacement guarantee",
+        "badge4_title": "Secure Payments & COD",
+        "badge4_desc": "Cards, Apple Pay & Cash on Delivery"
+      }
+    },
+    "category_icons": {
+      "type": "category-icons",
       "blocks": {
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
+        "cat_1": {
+          "type": "category_item",
           "settings": {
-            "text": "<p>Browse our latest products</p>",
-            "text_color": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "title": "Smartphones",
+            "icon_emoji": "📱",
+            "link": "shopify://collections/all"
+          }
         },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
+        "cat_2": {
+          "type": "category_item",
           "settings": {
-            "label": "Shop all",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button-custom",
-            "custom_button_background": "rgba(0,0,0,0)",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
+            "title": "Laptops",
+            "icon_emoji": "💻",
+            "link": "shopify://collections/all"
+          }
+        },
+        "cat_3": {
+          "type": "category_item",
+          "settings": {
+            "title": "Audio & Sound",
+            "icon_emoji": "🎧",
+            "link": "shopify://collections/all"
+          }
+        },
+        "cat_4": {
+          "type": "category_item",
+          "settings": {
+            "title": "Smartwatches",
+            "icon_emoji": "⌚",
+            "link": "shopify://collections/all"
+          }
+        },
+        "cat_5": {
+          "type": "category_item",
+          "settings": {
+            "title": "Gaming Gear",
+            "icon_emoji": "🎮",
+            "link": "shopify://collections/all"
+          }
+        },
+        "cat_6": {
+          "type": "category_item",
+          "settings": {
+            "title": "Accessories",
+            "icon_emoji": "🔌",
+            "link": "shopify://collections/all"
+          }
+        },
+        "cat_7": {
+          "type": "category_item",
+          "settings": {
+            "title": "TVs & Displays",
+            "icon_emoji": "📺",
+            "link": "shopify://collections/all"
+          }
         }
       },
       "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
+        "cat_1",
+        "cat_2",
+        "cat_3",
+        "cat_4",
+        "cat_5",
+        "cat_6",
+        "cat_7"
       ],
-      "name": "t:names.hero",
       "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 24,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "background_color": "rgba(0,0,0,0)",
-        "toggle_overlay": true,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
+        "heading": "Shop by Category",
+        "view_all_link": "shopify://collections/all"
+      }
+    },
+    "flash_deals": {
+      "type": "flash-deals",
+      "settings": {
+        "badge_text": "⚡ FLASH DEALS",
+        "heading": "Deals of the Day",
+        "countdown_hours": 8,
+        "collection": "all",
+        "products_to_show": 4
       }
     },
     "product_list_fa6P9H": {
@@ -130,7 +154,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
+                "text": "<h3>Trending in Electronics</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -273,13 +297,39 @@
         "horizontal_alignment": "flex-start",
         "gap": 28,
         "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 36,
+        "padding-block-end": 36
+      }
+    },
+    "brand_grid": {
+      "type": "brand-grid",
+      "blocks": {
+        "brand_1": { "type": "brand_item", "settings": { "brand_name": "Apple", "link": "shopify://collections/all" } },
+        "brand_2": { "type": "brand_item", "settings": { "brand_name": "Samsung", "link": "shopify://collections/all" } },
+        "brand_3": { "type": "brand_item", "settings": { "brand_name": "Sony", "link": "shopify://collections/all" } },
+        "brand_4": { "type": "brand_item", "settings": { "brand_name": "Dell", "link": "shopify://collections/all" } },
+        "brand_5": { "type": "brand_item", "settings": { "brand_name": "HP", "link": "shopify://collections/all" } },
+        "brand_6": { "type": "brand_item", "settings": { "brand_name": "Anker", "link": "shopify://collections/all" } }
+      },
+      "block_order": [
+        "brand_1",
+        "brand_2",
+        "brand_3",
+        "brand_4",
+        "brand_5",
+        "brand_6"
+      ],
+      "settings": {
+        "heading": "Featured Electronics Brands"
       }
     }
   },
   "order": [
-    "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "marketplace_hero",
+    "trust_badges",
+    "category_icons",
+    "flash_deals",
+    "product_list_fa6P9H",
+    "brand_grid"
   ]
 }
