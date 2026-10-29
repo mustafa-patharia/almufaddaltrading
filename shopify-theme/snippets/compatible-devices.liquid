@@ -1,0 +1,71 @@
+{% comment %}
+  Renders device / phone model compatibility badges.
+  Checks product.metafields.custom.compatible_models or tags with 'model:' or 'compat:'.
+  Al Mufaddal General Trading · Electronics & Accessories
+{% endcomment %}
+
+{% liquid
+  assign models = ''
+  if product.metafields.custom.compatible_models != blank
+    assign models = product.metafields.custom.compatible_models
+  else
+    for tag in product.tags
+      if tag contains 'model:' or tag contains 'compat:'
+        assign clean_tag = tag | remove: 'model:' | remove: 'compat:' | strip
+        if models == ''
+          assign models = clean_tag
+        else
+          assign models = models | append: ',' | append: clean_tag
+        endif
+      endif
+    endfor
+  endif
+%}
+
+{% if models != blank %}
+  {% assign model_list = models | split: ',' %}
+  <div class="device-compat-block">
+    <span class="device-compat__label">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>
+      Compatible with:
+    </span>
+    <div class="device-compat__chips">
+      {% for m in model_list %}
+        <span class="device-compat__chip">{{ m | strip }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <style>
+    .device-compat-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-block: 8px;
+    }
+    .device-compat__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .device-compat__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .device-compat__chip {
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      color: #111827;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+  </style>
+{% endif %}

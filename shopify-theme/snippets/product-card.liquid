@@ -77,6 +77,11 @@
     view-event-payload="{{ product | standard_event_data: 'view', context: product_view_context | escape }}"
   {%- endunless -%}
 >
+  {% unless onboarding %}
+    <div class="product-card__wishlist-pos" style="position: absolute; top: 12px; right: 12px; z-index: 10;">
+      {% render 'wishlist-button', product: product %}
+    </div>
+  {% endunless %}
   <a
     id="{{ product_card_id | md5 }}"
     {% unless onboarding %}
@@ -113,6 +118,7 @@
     "
   >
     {{ children }}
+    {% render 'compatible-devices', product: product %}
   </div>
 </product-card>
 

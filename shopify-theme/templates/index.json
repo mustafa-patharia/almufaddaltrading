@@ -302,6 +302,79 @@
         "padding-block-end": 48
       }
     },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "rev_1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Outstanding fulfillment speed. We procured a fleet of corporate smartphones and docks for our Dubai office; arrived the same afternoon with official GCC warranty documents.",
+            "author_name": "Tariq Al-Mansoor",
+            "author_role": "Procurement Director · Business Bay, Dubai"
+          }
+        },
+        "rev_2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Authenticity is critical for high-end acoustic gear. Al Mufaddal provided certified distributor stock with transparent invoicing and quick Cash on Delivery.",
+            "author_name": "Marcus Vance",
+            "author_role": "Commercial Client · Dubai Marina"
+          }
+        },
+        "rev_3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Seamless warranty processing and fast dispatch across Abu Dhabi. Best regional electronics trading partner we have collaborated with for retail distribution.",
+            "author_name": "Zaid Al-Husseini",
+            "author_role": "Retail Partner · Abu Dhabi, UAE"
+          }
+        }
+      },
+      "block_order": ["rev_1", "rev_2", "rev_3"],
+      "settings": {
+        "meta_text": "Verified Endorsements",
+        "heading": "Client & Procurement Reviews"
+      }
+    },
+    "faq_section": {
+      "type": "faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are all products 100% genuine with official manufacturer warranty?",
+            "answer": "Yes, absolutely. Al Mufaddal General Trading only sources certified inventory directly from authorized brand distributors. All devices come in original sealed packaging backed by valid GCC/international manufacturer warranty."
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are your delivery timelines across Dubai and other Emirates?",
+            "answer": "We offer same-day express delivery within Dubai for orders confirmed before 2:00 PM. For Abu Dhabi, Sharjah, Ajman, and Northern Emirates, standard delivery is completed within 24 to 48 hours with door-to-door tracking."
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you accept Cash on Delivery (COD) and corporate invoicing?",
+            "answer": "Yes. We accept Cash on Delivery (COD) across the UAE, major credit/debit cards, and Apple Pay. For corporate clients, we provide official VAT-compliant tax invoices with commercial payment terms."
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is your warranty claim and returns procedure?",
+            "answer": "We offer an immediate 7-day return/replacement policy on sealed products. For warranty assistance, our dedicated Dubai client care team coordinates directly with authorized brand service centers."
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4"],
+      "settings": {
+        "meta_text": "Knowledge Base",
+        "heading": "Frequently Asked Questions",
+        "subheading": "Everything you need to know regarding authentication, UAE delivery timelines, and official warranties."
+      }
+    },
     "brand_grid": {
       "type": "brand-grid",
       "blocks": {
@@ -332,6 +405,8 @@
     "category_icons",
     "flash_deals",
     "product_list_fa6P9H",
+    "testimonials",
+    "faq_section",
     "brand_grid"
   ]
 }

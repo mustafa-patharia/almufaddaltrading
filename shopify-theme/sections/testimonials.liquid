@@ -1,0 +1,216 @@
+{% comment %}
+  Customer Testimonials & Corporate Endorsements
+  Al Mufaddal General Trading · Dubai, UAE
+{% endcomment %}
+
+<section class="testimonials-section">
+  <div class="testimonials__container">
+    <div class="testimonials__header">
+      <p class="testimonials__meta">{{ section.settings.meta_text | default: 'Verified Endorsements' }}</p>
+      <h2 class="testimonials__title">{{ section.settings.heading | default: 'Client & Procurement Reviews' }}</h2>
+    </div>
+
+    <div class="testimonials__grid">
+      {% for block in section.blocks %}
+        <div class="testimonial-card" {{ block.shopify_attributes }}>
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            {% for i in (1..5) %}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#111827" stroke="#111827" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            {% endfor %}
+          </div>
+
+          <blockquote class="testimonial-card__quote">
+            "{{ block.settings.quote }}"
+          </blockquote>
+
+          <div class="testimonial-card__author-info">
+            <div class="testimonial-card__author-avatar">
+              {{ block.settings.author_name | slice: 0, 1 }}
+            </div>
+            <div>
+              <p class="testimonial-card__author-name">{{ block.settings.author_name }}</p>
+              <p class="testimonial-card__author-role">{{ block.settings.author_role }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .testimonials-section {
+    padding-block: 56px;
+    background-color: #ffffff;
+    border-top: 1px solid #ebecee;
+    border-bottom: 1px solid #ebecee;
+  }
+  .testimonials__container {
+    max-width: var(--page-width, 1340px);
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+  .testimonials__header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .testimonials__meta {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin: 0 0 6px 0;
+  }
+  .testimonials__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin: 0;
+  }
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    .testimonials__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .testimonial-card {
+    background-color: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--tech-radius-lg, 12px);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+  }
+  .testimonial-card:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -4px rgba(17, 24, 39, 0.06);
+  }
+  .testimonial-card__stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 16px;
+  }
+  .testimonial-card__quote {
+    font-size: 0.925rem;
+    line-height: 1.6;
+    color: #374151;
+    margin: 0 0 24px 0;
+    font-style: normal;
+  }
+  .testimonial-card__author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .testimonial-card__author-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #111827;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .testimonial-card__author-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    line-height: 1.25;
+  }
+  .testimonial-card__author-role {
+    font-size: 0.775rem;
+    color: #6b7280;
+    margin: 2px 0 0 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "meta_text",
+      "label": "Subheading",
+      "default": "Verified Endorsements"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Client & Procurement Reviews"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Review Card",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "Outstanding fulfillment speed. We procured a fleet of corporate smartphones and docks for our Dubai office; arrived the same afternoon with official GCC warranty documents."
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Tariq Al-Mansoor"
+        },
+        {
+          "type": "text",
+          "id": "author_role",
+          "label": "Role / Location",
+          "default": "Procurement Manager · Business Bay, Dubai"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials (Client Reviews)",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Outstanding fulfillment speed. We procured a fleet of corporate smartphones and docks for our Dubai office; arrived the same afternoon with official GCC warranty documents.",
+            "author_name": "Tariq Al-Mansoor",
+            "author_role": "Procurement Director · Business Bay, Dubai"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Authenticity is critical for high-end acoustic gear. Al Mufaddal provided certified distributor stock with transparent invoicing and quick Cash on Delivery.",
+            "author_name": "Marcus Vance",
+            "author_role": "Commercial Client · Dubai Marina"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Seamless warranty processing and fast dispatch across Abu Dhabi. Best regional electronics trading partner we have collaborated with for retail distribution.",
+            "author_name": "Zaid Al-Husseini",
+            "author_role": "Retail Partner · Abu Dhabi, UAE"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

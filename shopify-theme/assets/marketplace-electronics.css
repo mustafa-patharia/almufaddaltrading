@@ -731,3 +731,48 @@
   transform: translateY(-2px);
   box-shadow: var(--tech-shadow-subtle);
 }
+
+/* ==========================================================================
+   6. BILINGUAL / ARABIC (RTL) FOUNDATION
+   ========================================================================== */
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .marketplace-hero__title,
+[dir="rtl"] .marketplace-hero__subtitle,
+[dir="rtl"] .category-showcase__header,
+[dir="rtl"] .curated-offers__top-bar,
+[dir="rtl"] .faq-item__question {
+  text-align: right;
+}
+
+[dir="rtl"] .marketplace-hero__actions {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .marketplace-feature-card__footer svg,
+[dir="rtl"] .category-showcase__header a svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .trust-pillar-item {
+  border-right: none;
+}
+
+@media screen and (min-width: 1024px) {
+  [dir="rtl"] .trust-pillar-item {
+    border-left: 1px solid #ebecee;
+    border-right: none;
+    padding: 12px 28px;
+  }
+  [dir="rtl"] .trust-pillar-item:first-child {
+    padding-right: 0;
+  }
+  [dir="rtl"] .trust-pillar-item:last-child {
+    border-left: none;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "sections": {
+    "main_page": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Frequently Asked Questions</h1>",
+            "alignment": "center",
+            "type_preset": "h2"
+          }
+        }
+      },
+      "block_order": ["title"],
+      "settings": {
+        "padding-block-start": 40,
+        "padding-block-end": 10
+      }
+    },
+    "faq_accordion": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are all products 100% genuine with official manufacturer warranty?",
+            "answer": "Yes, absolutely. Al Mufaddal General Trading only sources certified inventory directly from authorized brand distributors. All devices come in original sealed packaging backed by valid GCC/international manufacturer warranty."
+          }
+        },
+        "q2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are your delivery timelines across Dubai and other Emirates?",
+            "answer": "We offer same-day express delivery within Dubai for orders confirmed before 2:00 PM. For Abu Dhabi, Sharjah, Ajman, and Northern Emirates, standard delivery is completed within 24 to 48 hours with door-to-door tracking."
+          }
+        },
+        "q3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you accept Cash on Delivery (COD) and corporate invoicing?",
+            "answer": "Yes. We accept Cash on Delivery (COD) across the UAE, major credit/debit cards, and Apple Pay. For corporate clients, we provide official VAT-compliant tax invoices with commercial payment terms."
+          }
+        },
+        "q4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is your warranty claim and returns procedure?",
+            "answer": "We offer an immediate 7-day return/replacement policy on sealed products. For warranty assistance, our dedicated Dubai client care team coordinates directly with authorized brand service centers."
+          }
+        },
+        "q5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you provide bulk wholesale rates for commercial and corporate orders?",
+            "answer": "Yes, as a general trading firm, we service bulk corporate procurement and retail resellers. You can reach our wholesale desk directly via WhatsApp or our Contact page."
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "settings": {
+        "meta_text": "Help Center & FAQ",
+        "heading": "Client Inquiries",
+        "subheading": "Find quick answers regarding our authentication, UAE express dispatch, and corporate accounts."
+      }
+    }
+  },
+  "order": ["main_page", "faq_accordion"]
+}
